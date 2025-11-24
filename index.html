@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用设计讲故事的插画师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .section { min-height: 100vh; display: flex; align-items: center; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .work-card { transition: transform 0.3s ease; }
+        .work-card:hover { transform: translateY(-8px); }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 py-4 px-8 md:px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold">XSM ILLUSTRATION</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="#home" class="nav-link font-medium">首页</a>
+                <a href="#works" class="nav-link font-medium">作品集</a>
+                <a href="#about" class="nav-link font-medium">个人介绍</a>
+                <a href="#contact" class="nav-link font-medium">联系方式</a>
+            </div>
+            <button class="md:hidden text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页板块 -->
+    <section id="home" class="section pt-20 px-8 md:px-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">用设计<br>讲故事的插画师</h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-lg">以时尚为笔，以情感为墨，让每一幅插画都成为独特的视觉叙事</p>
+                <a href="#works" class="inline-block bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition">
+                    查看作品集
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-pink-100 rounded-full filter blur-3xl opacity-50"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl opacity-50"></div>
+                <div class="relative w-full h-96 md:h-[500px] bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="https://picsum.photos/id/65/800/1000" alt="时尚插画代表作" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集板块 -->
+    <section id="works" class="section px-8 md:px-16 py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center">作品集</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- 作品1 -->
+                <div class="work-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="h-64 bg-gray-200 rounded-md overflow-hidden mb-4">
+                        <img src="https://picsum.photos/id/96/600/800" alt="时尚杂志插画" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">时尚杂志封面系列</h3>
+                    <p class="text-gray-600 mb-4">为高端时尚杂志打造的封面插画，融合复古元素与现代审美</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">板绘</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">时尚</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">商业插画</span>
+                    </div>
+                </div>
+                <!-- 作品2 -->
+                <div class="work-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="h-64 bg-gray-200 rounded-md overflow-hidden mb-4">
+                        <img src="https://picsum.photos/id/24/600/800" alt="品牌视觉插画" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">品牌视觉形象插画</h3>
+                    <p class="text-gray-600 mb-4">为服装品牌设计的系列插画，用于产品包装与宣传物料</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">手绘</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">品牌设计</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">商业合作</span>
+                    </div>
+                </div>
+                <!-- 作品3 -->
+                <div class="work-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="h-64 bg-gray-200 rounded-md overflow-hidden mb-4">
+                        <img src="https://picsum.photos/id/62/600/800" alt="艺术创作插画" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">情感叙事油画系列</h3>
+                    <p class="text-gray-600 mb-4">以个人情感为主题的油画创作，探索色彩与光影的表达</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">油画</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">艺术创作</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">情感表达</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人介绍板块 -->
+    <section id="about" class="section px-8 md:px-16 py-20 bg-gray-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/3 relative">
+                <div class="absolute -top-10 -left-10 w-48 h-48 bg-yellow-100 rounded-full filter blur-3xl opacity-50"></div>
+                <div class="relative w-full h-80 md:h-[400px] bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="https://picsum.photos/id/64/600/800" alt="插画师形象照" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold mb-6">关于我</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    一名专注于时尚领域的插画师，始终相信设计的力量在于传递故事与情感。
+                    多年来深耕插画创作，不断探索手绘、油画与板绘的多元表达，
+                    作品注重色彩的碰撞与细节的刻画，追求时尚感与艺术性的平衡。
+                </p>
+                <!-- 技能标签 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">技能专长</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-5 py-2 bg-black text-white rounded-full font-medium">手绘</span>
+                        <span class="px-5 py-2 bg-black text-white rounded-full font-medium">油画</span>
+                        <span class="px-5 py-2 bg-black text-white rounded-full font-medium">板绘</span>
+                    </div>
+                </div>
+                <!-- 教育经历 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">教育经历</h3>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <p class="text-gray-800 font-medium">名校 视觉传达设计专业</p>
+                        <p class="text-gray-600">在读期间多次获得设计类奖项，深耕插画创作与时尚设计领域</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式板块 -->
+    <section id="contact" class="section px-8 md:px-16 py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center">联系方式</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 邮箱 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-4 text-gray-800">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">邮箱联系</h3>
+                    <a href="mailto:1956329096@qq.com" class="text-gray-600 hover:text-black transition">
+                        1956329096@qq.com
+                    </a>
+                </div>
+                <!-- 微信 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-4 text-gray-800">
+                        <i class="fa fa-weixin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">微信沟通</h3>
+                    <p class="text-gray-600">yxe13430534801</p>
+                </div>
+                <!-- 电话 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-4 text-gray-800">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">合作咨询</h3>
+                    <a href="tel:15019263008" class="text-gray-600 hover:text-black transition">
+                        15019263008
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-black text-white py-8 px-8 md:px-16">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2025 用设计讲故事的插画师. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
